@@ -1,0 +1,228 @@
+/* src/styles/Ranking.css */
+.ranking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-players-container {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-players-container h2 {
+  color: #1a3c6c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.no-players {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+/* Top 3 Players */
+.top-player-display {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute content evenly */
+  background: linear-gradient(135deg, #ffd700, #ffca28); /* Gold gradient */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 180px;
+  height: 180px; /* Fixed height for consistency */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.top-player-display:hover {
+  transform: scale(1.05);
+}
+
+.top-player-display img {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.top-player-display p {
+  margin: 5px 0;
+  color: #1a3c6c;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px; /* Prevent long usernames from breaking layout */
+}
+
+.top-player-display p:last-child {
+  font-size: 1.1rem;
+  color: #d81b60;
+}
+
+/* Ranking List */
+.ranking-list-container {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-bar {
+  display: grid;
+  grid-template-columns: 50px 80px 1fr 100px 100px;
+  align-items: center;
+  background-color: #1a3c6c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ranking-bar p {
+  margin: 0;
+  text-align: center;
+}
+
+.ranking-bar .picture {
+  width: 80px; /* Match image column width */
+}
+
+.ranking-bar .user {
+  text-align: left;
+}
+
+.ranking-bar .points,
+.ranking-bar .average {
+  text-align: right;
+}
+
+.player-display {
+  display: grid;
+  grid-template-columns: 50px 80px 1fr 100px 100px;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.player-display:hover {
+  background-color: #e3f2fd;
+}
+
+.player-display p {
+  margin: 0;
+  color: #333;
+}
+
+.player-display p:first-child {
+  font-weight: bold;
+  color: #1a3c6c;
+  text-align: center;
+}
+
+.player-display img {
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.player-display p:nth-child(3) {
+  font-weight: 500;
+}
+
+.player-display p:nth-child(4),
+.player-display p:nth-child(5) {
+  text-align: right;
+  color: #555;
+}
+
+.sort-selector {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sort-selector label {
+  color: #1a3c6c;
+  font-weight: 500;
+}
+
+.sort-selector select {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sort-selector select:focus {
+  outline: none;
+  border-color: #1a3c6c;
+  box-shadow: 0 0 5px rgba(26, 60, 108, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .ranking-container {
+    padding: 10px;
+  }
+
+  .top-player-display {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    height: 160px;
+  }
+
+  .top-player-display img,
+  .player-display img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ranking-bar,
+  .player-display {
+    grid-template-columns: 40px 60px 1fr 80px 80px;
+    font-size: 0.85rem;
+  }
+
+  .ranking-bar .picture {
+    width: 60px;
+  }
+}

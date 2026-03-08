@@ -1,0 +1,136 @@
+/* src/styles/MyScores.css */
+.my-scores-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.error-message {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.no-scores {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.average-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.average-display h2 {
+  color: #1a3c6c;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.categories-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-section {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+  color: #1a3c6c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+.score-quiz-display {
+  display: grid;
+  grid-template-columns: 1fr 100px 50px;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.score-quiz-display:hover {
+  background-color: #e3f2fd;
+}
+
+.my-quiz-title {
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-quiz-score {
+  color: #d81b60;
+  font-weight: 600;
+  text-align: right;
+}
+
+.favorite-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.favorite-toggle.active {
+  color: #ffd700;
+}
+
+.favorite-toggle:hover {
+  color: #ffca28;
+}
+
+.favorite-toggle:focus {
+  outline: none;
+  color: #ffca28;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .my-scores-container {
+    padding: 10px;
+  }
+
+  .average-display h2 {
+    font-size: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .score-quiz-display {
+    grid-template-columns: 1fr 80px 40px;
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .favorite-toggle {
+    font-size: 1rem;
+  }
+}
