@@ -4,8 +4,8 @@ Application web de quiz en ligne, développée avec **Flask** (backend) et **Rea
 
 ## Aperçu
 
-![Capture du jeu](assets/acceuil.png)
-![Capture du jeu](resultats.png)
+![Capture du jeu](assets/accueil.png)
+![Capture du jeu](assets/resultats.png)
 
 ## Fonctionnalités
 
