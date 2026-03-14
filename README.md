@@ -2,6 +2,11 @@
 
 Application web de quiz en ligne, développée avec **Flask** (backend) et **React + Vite** (frontend).
 
+## Aperçu
+
+![Capture du jeu](assets/acceuil.png)
+![Capture du jeu](resultats.png)
+
 ## Fonctionnalités
 
 - Inscription et connexion avec activation par e-mail
